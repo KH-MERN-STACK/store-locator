@@ -28,6 +28,7 @@ async function addStore(e) {
 		if (res.status == 400) {
 			throw Error("The Store already exists")
 		}
+        if (res.status != 200) throw Error("An error occurred")
 		alert("Store has been updated !")
 		window.location.href = "/index.html"
 	} catch (err) {

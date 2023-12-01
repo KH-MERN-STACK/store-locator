@@ -17,9 +17,13 @@ export const getStores = async (req, res, next) => {
 }
 
 export const addStore = async (req, res, next) => {
+
 	try {
+		const exist = await Store.find({ storeId: req.body.storeId })
+		if (exist.length)
+			return res.status(400).json({ error: `This store is already exists` })
 		const newStore = await Store.create(req.body)
-		res.status(200).json({ success: true, data: newStore })
+		return res.status(200).json({ success: true, data: newStore })
 	} catch (err) {
 		console.log(err)
 		if (err.code === 11000)
