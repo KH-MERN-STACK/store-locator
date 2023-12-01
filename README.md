@@ -3,10 +3,10 @@ Adding stores icons on a map with IDs and address using a node geocoder and mapb
 
 
 ## env file data
-1- PORT [for example = 5000]
-2- MONGO_URI : the connection link to the mongo database
-3- GEOCODER_PROVIDER: mapquest
-4- GEOCODER_API_KEY: the api key for mapquest
+  - PORT [for example = 5000]
+  - MONGO_URI : the connection link to the mongo database
+  - GEOCODER_PROVIDER: mapquest
+  - GEOCODER_API_KEY: the api key for mapquest
 
 ## Here is a Demo for the project.
 
